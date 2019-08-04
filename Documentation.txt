@@ -1,0 +1,63 @@
+This library is written for LDR's. As commonly opposed to just using analogRead
+sometimes we want more complex uses of the readings.
+
+/*
+
+The ability to use just analogRead using the functions
+
+ReadNoAvgLux -- if you want to read readings with no average.
+
+ReadNoAvgFC -- same as ReadNoAvgLux but shows readings in Foot Candles.
+
+Both the functions above take a bool param which lets the user specify
+if they want to print the reading to serial.
+
+*/
+
+/*
+
+The ability to read from the LDR a set number of times with delay between readings
+for a set period of time.
+
+SetSampleSize -- set number of readings to take for avg. Defaulted to 3.
+
+SetSampleInterval -- set interval between readings for avs. Defaulted to 50 milliseconds.
+
+ReadLux -- reads ldr and returns an average using the variables specified above.
+
+ReadInFC -- same as ReadLux but shows reading in Foot Candles.
+
+SetSampleSize and SetSampleInterval both take int params.
+
+ReadLux and ReadInFC take a bool param which lets the user specify
+if they want to print the reading to serial.
+
+*/
+
+/*
+
+The ability to read from the LDR a set number of times with delay between readings
+for a set period of time where it discards readings which fall outside the specified
+range.
+
+SetSampleSize -- set number of readings to take for avg. Defaulted to 3.
+
+SetSampleInterval -- set interval between readings for avs. Defaulted to 50 milliseconds.
+
+SetRange -- set range in percent for readings. The range will be calculated in accordance
+            to the reading accquired from ruinning the function begin. The range is defaulted
+            to 10 percent.
+
+SafeReadLux -- reads ldr and returns an average using the variables specified above
+               only if it falls under the range.
+
+SafeReadInFC -- same as SafeReadLux but shows readings in Foot Candles.
+
+SetSampleSize and SetSampleInterval both take int params.
+
+SetRange takes a float param.
+
+SafeReadLux and SafeReadInFC take a bool param which lets the user specify
+if they want to print the reading to serial.
+
+*/
