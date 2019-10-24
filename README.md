@@ -1,4 +1,4 @@
-# XC_4446_LDR_LIBRARY
+# XC_4446_LDR
 
 An Arduino Library for LDR XC_4446
 
